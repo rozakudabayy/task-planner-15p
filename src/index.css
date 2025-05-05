@@ -1,0 +1,91 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Дополнительные стили */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Стили для карточек задач */
+.task-card {
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.task-card-blue {
+  background-color: #e0f2fe;
+}
+
+.task-card-pink {
+  background-color: #fce7f3;
+}
+
+.task-card-red {
+  background-color: #fee2e2;
+}
+
+/* Стили для иконок */
+.task-icon {
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+/* Стили для дней недели */
+.weekday-circle {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.weekday-active {
+  background-color: #ec4899;
+  color: white;
+}
+
+.weekday-inactive {
+  border: 1px solid #f9a8d4;
+  color: #4b5563;
+}
+
+.weekday-label {
+  color: #6b7280;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
